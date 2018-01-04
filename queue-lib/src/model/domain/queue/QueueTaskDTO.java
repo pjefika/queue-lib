@@ -10,12 +10,15 @@ import java.util.Date;
 import java.util.List;
 import model.domain.queue.enuns.TaskState;
 import model.domain.queue.enuns.TasksEnum;
+import org.bson.types.ObjectId;
 
 /**
  *
  * @author G0042204
  */
-public class QueueTaskDTO  {
+public class QueueTaskDTO {
+
+    private ObjectId id;
 
     private Date dateQueueIn;
 
@@ -36,6 +39,14 @@ public class QueueTaskDTO  {
     private Object output;
 
     public QueueTaskDTO() {
+    }
+
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
     }
 
     public Date getDateQueueIn() {
