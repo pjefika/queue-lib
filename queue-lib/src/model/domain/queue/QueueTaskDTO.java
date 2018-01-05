@@ -5,12 +5,15 @@
  */
 package model.domain.queue;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import model.domain.queue.enuns.TaskState;
 import model.domain.queue.enuns.TasksEnum;
 import org.bson.types.ObjectId;
+import org.mongodb.morphia.annotations.Id;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import org.mongodb.morphia.annotations.Embedded;
 
 /**
  *
@@ -18,6 +21,8 @@ import org.bson.types.ObjectId;
  */
 public class QueueTaskDTO {
 
+    @Id
+    @JsonSerialize(using = ToStringSerializer.class)
     private ObjectId id;
 
     private Date dateQueueIn;
@@ -36,7 +41,8 @@ public class QueueTaskDTO {
 
     private String consumer;
 
-    private Object output;
+    @Embedded
+    private List<Item> output;
 
     public QueueTaskDTO() {
     }
@@ -55,6 +61,14 @@ public class QueueTaskDTO {
 
     public void setDateQueueIn(Date dateQueueIn) {
         this.dateQueueIn = dateQueueIn;
+    }
+
+    public Date getDateConsumed() {
+        return dateConsumed;
+    }
+
+    public void setDateConsumed(Date dateConsumed) {
+        this.dateConsumed = dateConsumed;
     }
 
     public Date getDateQueueOut() {
@@ -82,22 +96,11 @@ public class QueueTaskDTO {
     }
 
     public List<Item> getInput() {
-        if (input == null) {
-            input = new ArrayList<>();
-        }
         return input;
-    }
-
-    public void addInputItem(Item item) {
-        this.getInput().add(item);
     }
 
     public void setInput(List<Item> input) {
         this.input = input;
-    }
-
-    public void setOutput(Object output) {
-        this.output = output;
     }
 
     public String getExecutor() {
@@ -116,16 +119,12 @@ public class QueueTaskDTO {
         this.consumer = consumer;
     }
 
-    public Date getDateConsumed() {
-        return dateConsumed;
-    }
-
-    public void setDateConsumed(Date dateConsumed) {
-        this.dateConsumed = dateConsumed;
-    }
-
-    public Object getOutput() {
+    public List<Item> getOutput() {
         return output;
+    }
+
+    public void setOutput(List<Item> output) {
+        this.output = output;
     }
 
 }

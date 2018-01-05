@@ -5,7 +5,6 @@
  */
 package model.domain.queue;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,14 +15,14 @@ public class Item {
 
     private String key;
 
-    private String value;
+    private Object value;
 
     private List<Item> itens;
 
     public Item() {
     }
 
-    public Item(String key, String value) {
+    public Item(String key, Object value) {
         this.key = key;
         this.value = value;
     }
@@ -36,18 +35,15 @@ public class Item {
         this.key = key;
     }
 
-    public String getValue() {
+    public Object getValue() {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(Object value) {
         this.value = value;
     }
 
     public List<Item> getItens() {
-        if (itens == null) {
-            itens = new ArrayList<>();
-        }
         return itens;
     }
 
