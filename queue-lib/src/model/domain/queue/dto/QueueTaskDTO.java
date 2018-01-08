@@ -103,8 +103,20 @@ public class QueueTaskDTO {
         this.consumer = consumer;
     }
 
-    public Object getInput() {
+    public GenericQueueInput getInput() {
         return input;
+    }
+
+    public void setInput(GenericQueueInput input) {
+        this.input = input;
+    }
+
+    public GenericQueueOutput getOutput() {
+        return output;
+    }
+
+    public void setOutput(GenericQueueOutput output) {
+        this.output = output;
     }
 
 }
