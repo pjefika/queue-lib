@@ -1,34 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model.domain.queue.dto;
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import java.util.Date;
 import model.domain.queue.enuns.TaskState;
 import model.domain.queue.enuns.TasksEnum;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Id;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 /**
  *
  * @author G0042204
  */
-@JsonTypeInfo(
-        use = JsonTypeInfo.Id.NAME,
-        include = JsonTypeInfo.As.PROPERTY,
-        property = "task")
-@JsonSubTypes({
-    @JsonSubTypes.Type(value = QueueTaskFulltestDTO.class, name = "FULLTEST")
-    , 
-  @JsonSubTypes.Type(value = CustomerRequestDTO.class, name = "truck")
-})
-public abstract class QueueTaskDTO {
+public class QueueTaskDTO {
 
     @Id
     @JsonSerialize(using = ToStringSerializer.class)
@@ -47,6 +31,10 @@ public abstract class QueueTaskDTO {
     private String executor;
 
     private String consumer;
+
+    private GenericQueueInput input;
+
+    private GenericQueueOutput output;
 
     public QueueTaskDTO() {
     }
@@ -113,6 +101,10 @@ public abstract class QueueTaskDTO {
 
     public void setConsumer(String consumer) {
         this.consumer = consumer;
+    }
+
+    public Object getInput() {
+        return input;
     }
 
 }

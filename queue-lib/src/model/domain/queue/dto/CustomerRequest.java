@@ -9,19 +9,19 @@ package model.domain.queue.dto;
  *
  * @author G0042204
  */
-public abstract class ExecutorRequestDTO {
+public class CustomerRequest extends GenericQueueInput {
 
-    private String executor;
+    private String instancia;
 
-    public ExecutorRequestDTO() {
+    public CustomerRequest() {
     }
 
-    public String getExecutor() {
-        return executor;
+    public String getInstancia() {
+        return instancia;
     }
 
-    public void setExecutor(String executor) {
-        this.executor = executor;
+    public void setInstancia(String instancia) {
+        this.instancia = instancia;
     }
 
 }
