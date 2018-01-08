@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         include = JsonTypeInfo.As.PROPERTY,
         property = "type")
 @JsonSubTypes({
-    @JsonSubTypes.Type(value = CustomerRequest.class, name = "customer")
+    @JsonSubTypes.Type(value = FulltestResponse.class, name = "fulltest")
     , 
   @JsonSubTypes.Type(value = CustomerRequest.class, name = "customer1")
 })
