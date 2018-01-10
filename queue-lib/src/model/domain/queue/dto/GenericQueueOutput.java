@@ -15,7 +15,8 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
         include = JsonTypeInfo.As.PROPERTY,
-        property = "type")
+        property = "type",
+        visible = true)
 @JsonSubTypes({
     @JsonSubTypes.Type(value = FulltestResponse.class, name = "fulltest")
     , 
@@ -28,9 +29,9 @@ public abstract class GenericQueueOutput {
     public GenericQueueOutput() {
     }
 
-    public String getType() {
-        return type;
-    }
+//    public String getType() {
+//        return type;
+//    }
 
     public void setType(String type) {
         this.type = type;
