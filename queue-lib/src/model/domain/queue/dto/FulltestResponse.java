@@ -5,7 +5,7 @@
  */
 package model.domain.queue.dto;
 
-import br.net.gvt.efika.model.entity.fulltest.FullTest;
+import fulltest.FullTest;
 
 /**
  *
