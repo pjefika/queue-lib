@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model.domain.queue.enuns;
+package model.enuns;
 
 /**
  *
@@ -11,7 +11,7 @@ package model.domain.queue.enuns;
  */
 public enum TasksEnum {
 
-    FULLTEST("Fulltest");
+    CERTIFICATION("Certificação"), AUTH("Autenticação"), CADASTRO("Cadastro");
 
     private final String desc;
 

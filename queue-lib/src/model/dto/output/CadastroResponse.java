@@ -3,17 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model.domain.queue.dto;
+package model.dto.output;
+
+import model.dto.input.GenericQueueInput;
 
 /**
  *
  * @author G0042204
  */
-public class CustomerRequest extends GenericQueueInput {
+public class CadastroResponse extends GenericQueueInput {
 
     private String instancia;
 
-    public CustomerRequest() {
+    public CadastroResponse() {
+        super("cadastro");
     }
 
     public String getInstancia() {

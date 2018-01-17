@@ -1,10 +1,12 @@
-package model.domain.queue.dto;
+package model.dto.task;
 
+import model.dto.input.GenericQueueInput;
+import model.dto.output.GenericQueueOutput;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import java.util.Date;
-import model.domain.queue.enuns.TaskState;
-import model.domain.queue.enuns.TasksEnum;
+import model.enuns.TaskState;
+import model.enuns.TasksEnum;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Id;
 

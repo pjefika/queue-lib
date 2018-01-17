@@ -3,14 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model.domain.queue.enuns;
+package model.enuns;
 
 /**
  *
- * @author G0042204
+ * @author G0041775
  */
-public enum TaskState {
+public enum CertificationResult {
 
-    PENDING, RUNNING, EXECUTED;
+    OK,
+    FIXED,
+    FISICAL,
+    FORWARDED_CO,
+    TO_FIX;
 
 }

@@ -5,6 +5,7 @@
  */
 package model.domain.queue.dto;
 
+import model.dto.output.CertificationResponse;
 import fulltest.FullTest;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -39,7 +40,7 @@ public class FulltestResponseIT {
     @Test
     public void testGetFulltest() {
         System.out.println("getFulltest");
-        FulltestResponse instance = new FulltestResponse();
+        CertificationResponse instance = new CertificationResponse();
         System.out.println("name:" + instance.getClass().getName());
 
     }
@@ -51,7 +52,7 @@ public class FulltestResponseIT {
     public void testSetFulltest() {
         System.out.println("setFulltest");
         FullTest fulltest = null;
-        FulltestResponse instance = new FulltestResponse();
+        CertificationResponse instance = new CertificationResponse();
         instance.setFulltest(fulltest);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

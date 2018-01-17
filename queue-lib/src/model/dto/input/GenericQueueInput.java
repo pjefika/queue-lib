@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model.domain.queue.dto;
+package model.dto.input;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 /**
@@ -14,24 +15,21 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
  */
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
-//        include = JsonTypeInfo.As.PROPERTY,
-        property = "type",
-        visible = true)
+        //        include = JsonTypeInfo.As.PROPERTY,
+        visible = true,
+        property = "type")
 @JsonSubTypes({
-    @JsonSubTypes.Type(value = FulltestResponse.class, name = "fulltest")
+    @Type(value = CertiticationInput.class, name = "customer")
     , 
-  @JsonSubTypes.Type(value = CustomerRequest.class, name = "customer1")
+  @Type(value = CertiticationInput.class, name = "customer1")
 })
-public abstract class GenericQueueOutput {
+public abstract class GenericQueueInput {
 
     private String type;
 
-    public GenericQueueOutput() {
+    public GenericQueueInput(String type) {
+        this.type = type;
     }
-
-//    public String getType() {
-//        return type;
-//    }
 
     public void setType(String type) {
         this.type = type;
