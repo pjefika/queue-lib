@@ -5,6 +5,8 @@
  */
 package model.dto.input;
 
+import br.net.gvt.efika.customer.EfikaCustomer;
+
 /**
  *
  * @author G0042204
@@ -12,6 +14,8 @@ package model.dto.input;
 public class CertiticationInput extends GenericQueueInput {
 
     private String instancia;
+
+    private EfikaCustomer customer;
 
     public CertiticationInput() {
         super("certification");
@@ -23,6 +27,14 @@ public class CertiticationInput extends GenericQueueInput {
 
     public void setInstancia(String instancia) {
         this.instancia = instancia;
+    }
+
+    public EfikaCustomer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(EfikaCustomer customer) {
+        this.customer = customer;
     }
 
 }
