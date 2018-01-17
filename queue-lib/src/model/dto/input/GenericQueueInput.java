@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 @JsonSubTypes({
     @Type(value = CertiticationInput.class, name = "customer")
     , 
-  @Type(value = CertiticationInput.class, name = "customer1")
+  @Type(value = AuthInput.class, name = "auth")
 })
 public abstract class GenericQueueInput {
 

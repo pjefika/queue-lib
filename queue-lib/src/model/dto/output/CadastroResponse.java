@@ -5,13 +5,11 @@
  */
 package model.dto.output;
 
-import model.dto.input.GenericQueueInput;
-
 /**
  *
  * @author G0042204
  */
-public class CadastroResponse extends GenericQueueInput {
+public class CadastroResponse extends GenericQueueOutput {
 
     private String instancia;
 
