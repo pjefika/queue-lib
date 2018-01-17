@@ -3,21 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model.dto.output;
-
-import br.net.gvt.efika.customer.EfikaCustomer;
+package model.dto.input;
 
 /**
  *
  * @author G0042204
  */
-public class CadastroResponse extends GenericQueueOutput {
+public class CadastroInput extends GenericQueueInput {
 
     private String instancia;
 
-    private EfikaCustomer customer;
-
-    public CadastroResponse() {
+    public CadastroInput() {
         super("cadastro");
     }
 
@@ -27,14 +23,6 @@ public class CadastroResponse extends GenericQueueOutput {
 
     public void setInstancia(String instancia) {
         this.instancia = instancia;
-    }
-
-    public EfikaCustomer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(EfikaCustomer customer) {
-        this.customer = customer;
     }
 
 }
