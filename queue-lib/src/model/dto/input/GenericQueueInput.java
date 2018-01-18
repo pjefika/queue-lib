@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         visible = true,
         property = "type")
 @JsonSubTypes({
-    @Type(value = CertiticationInput.class, name = "customer")
+    @Type(value = CertiticationInput.class, name = "certification")
     , 
     @Type(value = AuthInput.class, name = "auth")
     , 
