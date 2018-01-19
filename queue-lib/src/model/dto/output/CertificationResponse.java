@@ -5,7 +5,7 @@
  */
 package model.dto.output;
 
-import model.dto.cert.CustomerCertificationDTO;
+import br.net.gvt.efika.model.certification.CustomerCertificationDTO;
 
 /**
  *
