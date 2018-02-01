@@ -23,6 +23,8 @@ import model.enuns.TaskResultState;
   @JsonSubTypes.Type(value = CadastroResponse.class, name = "cadastro")
     ,
     @JsonSubTypes.Type(value = AuthResponse.class, name = "auth")
+    ,
+    @JsonSubTypes.Type(value = ConfRedeResponse.class, name = "ConfRedeResponse")
 
 })
 public abstract class GenericQueueOutput {
