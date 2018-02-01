@@ -24,7 +24,9 @@ import model.enuns.TaskResultState;
     ,
     @JsonSubTypes.Type(value = AuthResponse.class, name = "auth")
     ,
-    @JsonSubTypes.Type(value = ConfRedeResponse.class, name = "ConfRedeResponse")
+    @JsonSubTypes.Type(value = ConfRedeResponse.class, name = "confRede")
+    ,
+    @JsonSubTypes.Type(value = OntsDispResponse.class, name = "ontsDisp")
 
 })
 public abstract class GenericQueueOutput {

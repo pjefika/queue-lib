@@ -11,7 +11,12 @@ package model.enuns;
  */
 public enum TasksEnum {
 
-    CERTIFICATION("Certificação"), AUTH("Autenticação"), CADASTRO("Cadastro"), CONF_REDE("Confiabilidade de Rede");
+    CERTIFICATION("Certificação"),
+    AUTH("Autenticação"),
+    CADASTRO("Cadastro"),
+    CONF_REDE("Confiabilidade de Rede"), 
+    ONTS_DISP("ONTs Disponíveis")
+    ;
 
     private final String desc;
 
