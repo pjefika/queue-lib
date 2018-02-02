@@ -27,6 +27,8 @@ import model.enuns.TaskResultState;
     @JsonSubTypes.Type(value = ConfRedeResponse.class, name = "confRede")
     ,
     @JsonSubTypes.Type(value = OntsDispResponse.class, name = "ontsDisp")
+    ,
+    @JsonSubTypes.Type(value = SetOntToOltResponse.class, name = "setOntToOlt")
 
 })
 public abstract class GenericQueueOutput {

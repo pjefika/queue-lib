@@ -15,7 +15,8 @@ public enum TasksEnum {
     AUTH("Autenticação"),
     CADASTRO("Cadastro"),
     CONF_REDE("Confiabilidade de Rede"), 
-    ONTS_DISP("ONTs Disponíveis")
+    ONTS_DISP("ONTs Disponíveis"), 
+    SET_ONT("Associar ONT a OLT")
     ;
 
     private final String desc;
