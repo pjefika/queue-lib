@@ -5,7 +5,7 @@
  */
 package br.net.gvt.efika.queue.model.dto.output;
 
-import br.net.gvt.efika.telecom.properties.gpon.SerialOntGpon;
+import br.net.gvt.efika.fulltest.model.telecom.properties.gpon.SerialOntGpon;
 import java.util.List;
 
 /**

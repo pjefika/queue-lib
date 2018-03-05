@@ -5,7 +5,7 @@
  */
 package br.net.gvt.efika.queue.model.dto.output;
 
-import br.net.gvt.efika.fulltest.ValidacaoResult;
+import br.net.gvt.efika.fulltest.model.fulltest.ValidacaoResult;
 
 /**
  *
