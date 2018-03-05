@@ -16,7 +16,8 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
         visible = true,
-        property = "type")
+        property = "type",
+        defaultImpl = GenericQueueInput.class)
 @JsonSubTypes({
     @Type(value = CertiticationInput.class, name = "certification")
     , 
@@ -29,6 +30,9 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 public abstract class GenericQueueInput {
 
     private String type;
+
+    public GenericQueueInput() {
+    }
 
     public GenericQueueInput(String type) {
         this.type = type;
