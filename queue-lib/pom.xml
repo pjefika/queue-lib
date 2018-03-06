@@ -43,17 +43,25 @@
         
         <dependency>
             <groupId>br.net.gvt.efika</groupId>
-            <artifactId>customer</artifactId>
-            <version>1.0.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>br.net.gvt.efika</groupId>
-                    <artifactId>fulltest-lib</artifactId>
-                </exclusion>
-            </exclusions>
+            <artifactId>fulltest</artifactId>
+            <version>1.0.1</version>
         </dependency>
         
-        <!-- https://mvnrepository.com/artifact/org.mongodb/bson -->
+        <dependency>
+            <groupId>br.net.gvt.efika</groupId>
+            <artifactId>efika_customer</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>br.net.gvt.efika</groupId>
+            <artifactId>customer</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        
+        
+        
+        <!--https://mvnrepository.com/artifact/org.mongodb/bson--> 
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>bson</artifactId>
