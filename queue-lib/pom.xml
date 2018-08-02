@@ -70,14 +70,20 @@
             <scope>provided</scope>
         </dependency>
         
-        
-       
-        <!--https://mvnrepository.com/artifact/org.mongodb/bson--> 
+        <!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
         <dependency>
             <groupId>org.mongodb</groupId>
-            <artifactId>bson</artifactId>
-            <version>3.6.0</version>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.8.0</version>
         </dependency>
+
+       
+        <!--https://mvnrepository.com/artifact/org.mongodb/bson--> 
+        <!--        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>bson</artifactId>
+            <version>3.8.0</version>
+        </dependency>-->
 
         
         <!-- https://mvnrepository.com/artifact/org.mongodb.morphia/morphia -->
