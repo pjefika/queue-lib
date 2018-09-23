@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.net.gvt.efika.queue.model.dto.input;
+package br.net.gvt.efika.queue.model.dto.output;
 
 import br.net.gvt.efika.efika_customer.model.customer.EfikaCustomer;
 
@@ -11,18 +11,14 @@ import br.net.gvt.efika.efika_customer.model.customer.EfikaCustomer;
  *
  * @author G0042204
  */
-public class ManobraInput extends GenericQueueInput {
+public class HpnaResponse extends GenericQueueOutput {
 
     private String instancia;
 
-    private String workOrderId;
-
-    private String motivo;
-
     private EfikaCustomer customer;
 
-    public ManobraInput() {
-        super("manobra");
+    public HpnaResponse() {
+        super("hpna");
     }
 
     public String getInstancia() {
@@ -39,22 +35,6 @@ public class ManobraInput extends GenericQueueInput {
 
     public void setCustomer(EfikaCustomer customer) {
         this.customer = customer;
-    }
-
-    public String getWorkOrderId() {
-        return workOrderId;
-    }
-
-    public void setWorkOrderId(String workOrderId) {
-        this.workOrderId = workOrderId;
-    }
-
-    public String getMotivo() {
-        return motivo;
-    }
-
-    public void setMotivo(String motivo) {
-        this.motivo = motivo;
     }
 
 }

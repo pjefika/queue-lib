@@ -13,6 +13,7 @@ public enum TasksEnum {
 
     CERTIFICATION("Certificação"),
     MANOBRA("Manobra"),
+    HPNA("Hpna"),
     AUTH("Autenticação"),
     CADASTRO("Cadastro"),
     CONF_REDE("Confiabilidade de Rede"), 

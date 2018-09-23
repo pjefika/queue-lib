@@ -11,18 +11,14 @@ import br.net.gvt.efika.efika_customer.model.customer.EfikaCustomer;
  *
  * @author G0042204
  */
-public class ManobraInput extends GenericQueueInput {
+public class HpnaInput extends GenericQueueInput {
 
     private String instancia;
 
-    private String workOrderId;
-
-    private String motivo;
-
     private EfikaCustomer customer;
 
-    public ManobraInput() {
-        super("manobra");
+    public HpnaInput() {
+        super("hpna");
     }
 
     public String getInstancia() {
@@ -39,22 +35,6 @@ public class ManobraInput extends GenericQueueInput {
 
     public void setCustomer(EfikaCustomer customer) {
         this.customer = customer;
-    }
-
-    public String getWorkOrderId() {
-        return workOrderId;
-    }
-
-    public void setWorkOrderId(String workOrderId) {
-        this.workOrderId = workOrderId;
-    }
-
-    public String getMotivo() {
-        return motivo;
-    }
-
-    public void setMotivo(String motivo) {
-        this.motivo = motivo;
     }
 
 }
