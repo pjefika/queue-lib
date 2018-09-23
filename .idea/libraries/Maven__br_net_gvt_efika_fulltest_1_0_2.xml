@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: br.net.gvt.efika:fulltest:1.0.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/br/net/gvt/efika/fulltest/1.0.2/fulltest-1.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/br/net/gvt/efika/fulltest/1.0.2/fulltest-1.0.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/br/net/gvt/efika/fulltest/1.0.2/fulltest-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
