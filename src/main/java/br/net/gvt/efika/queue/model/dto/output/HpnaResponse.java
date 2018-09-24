@@ -7,6 +7,8 @@ package br.net.gvt.efika.queue.model.dto.output;
 
 import br.net.gvt.efika.efika_customer.model.customer.EfikaCustomer;
 
+import java.util.HashMap;
+
 /**
  *
  * @author G0042204
@@ -16,6 +18,8 @@ public class HpnaResponse extends GenericQueueOutput {
     private String instancia;
 
     private EfikaCustomer customer;
+
+    private HashMap<String, Object> resposta;
 
     public HpnaResponse() {
         super("hpna");
@@ -37,4 +41,11 @@ public class HpnaResponse extends GenericQueueOutput {
         this.customer = customer;
     }
 
+    public HashMap<String, Object> getResposta() {
+        return resposta;
+    }
+
+    public void setResposta(HashMap<String, Object> resposta) {
+        this.resposta = resposta;
+    }
 }
